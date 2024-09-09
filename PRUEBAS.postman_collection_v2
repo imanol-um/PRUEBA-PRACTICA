@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "d1222b44-2c80-4b4a-8155-6f2f7ef2e7a3",
+		"name": "PRUEBAS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27165920"
+	},
+	"item": [
+		{
+			"name": "EMPLEADO",
+			"item": [
+				{
+					"name": "LISTAR",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8001/Empleado/listar"
+					},
+					"response": []
+				},
+				{
+					"name": "GUARDAR",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nombre\": \"FRANCISCO\",\r\n        \"apellidos\": \"MARTINEZ\",\r\n        \"curp\": \"FMLO060819\",\r\n        \"direccionId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8001/Empleado/guardar"
+					},
+					"response": []
+				},
+				{
+					"name": "EDITAR",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nombre\": \"FRANCISCO\",\r\n        \"apellidos\": \"MARTINEZ\",\r\n        \"curp\": \"FMLO060819\",\r\n        \"puesto\": \"AYUDATE GENERAL\",\r\n        \"claveJefeInmediato\": \"UIMI010413\",\r\n        \"direccionId\": 2\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8001/Empleado/editar"
+					},
+					"response": []
+				},
+				{
+					"name": "LISTARDIRECCION",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nombre\": \"IMANOL\",\r\n        \"apellidos\": \"URIBE\",\r\n        \"curp\": \"UIMI010413\",\r\n        \"puesto\": \"SIN PUESTO\",\r\n        \"claveJefeInmediato\": \"SIN JEFE\",\r\n        \"direccionId\": 1\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8001/Empleado/listarEmpleadoDireccion"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DIRECCION",
+			"item": [
+				{
+					"name": "LISTAR",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8002/Direccion/listar"
+					},
+					"response": []
+				},
+				{
+					"name": "EDITAR",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"idDireccion\": 10,\r\n        \"calle\": \"CALLE SAN JUANA DE QUEVEDO\",\r\n        \"noExterior\": 18,\r\n        \"colonia\": \"SAN ANTONIO\",\r\n        \"municipio\": \"TEMALCINGO\",\r\n        \"estado\": \"CUIDAD DE MEXICO\",\r\n        \"pais\": \"MEXICO\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8002/Direccion/editar"
+					},
+					"response": []
+				},
+				{
+					"name": "GUARDAR",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"idDireccion\": 10,\r\n        \"calle\": \"CALLE SAN JUANA\",\r\n        \"noExterior\": 18,\r\n        \"colonia\": \"SAN ANTONIO\",\r\n        \"municipio\": \"TEMALCINGO\",\r\n        \"estado\": \"CUIDAD DE MEXICO\",\r\n        \"pais\": \"MEXICO\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8002/Direccion/guardar"
+					},
+					"response": []
+				},
+				{
+					"name": "BUSCAR",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8002/Direccion/buscar/1"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
